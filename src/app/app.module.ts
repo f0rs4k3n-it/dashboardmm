@@ -8,7 +8,11 @@ import { ContactComponent } from './modules/general/contact/contact.component';
 import { AboutComponent } from './modules/general/about/about.component';
 import { LoginComponent } from './modules/general/login/login.component';
 import { SignupComponent } from './modules/general/signup/signup.component';
-import { NotFoundComponent } from './modules/general/not-found/not-found.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -17,12 +21,16 @@ import { NotFoundComponent } from './modules/general/not-found/not-found.compone
     ContactComponent,
     AboutComponent,
     LoginComponent,
-    SignupComponent,
-    NotFoundComponent
+    SignupComponent    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NoopAnimationsModule,
+    FormsModule,
+    HttpClientModule,
+    MaterialModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
